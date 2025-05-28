@@ -32,6 +32,6 @@ Aplikasi ini dikembangkan sebagai bagian dari **latihan responsi praktikum mata 
 ```
 lib/
 ├── models/              # Model data (Restaurant)
-├── screens/             # Semua layar UI (Login, Register, List, Detail, Favorite)
+├── pages/             # Semua layar UI (Login, Register, List, Detail, Favorite)
 ├── services/            # Kode untuk API, auth, dan layanan favorit
 ├── main.dart            # Entry point aplikasi
