@@ -1,6 +1,6 @@
 # 🍽️ Restaurant App 
 
-Aplikasi ini dikembangkan sebagai bagian dari **latihan responsi praktikum mata kuliah Pemrograman Mobile**. Proyek ini bertujuan untuk mengasah keterampilan menggunakan **Flutter** dalam membangun aplikasi mobile.
+Aplikasi ini dikembangkan sebagai bagian dari **latihan responsi Praktikum Pemrograman Mobile**. Proyek ini bertujuan untuk mengasah keterampilan menggunakan **Flutter** dalam membangun aplikasi mobile.
 
 ## 📱 Fitur Utama
 
