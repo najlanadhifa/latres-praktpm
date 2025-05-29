@@ -21,8 +21,7 @@ Aplikasi ini dikembangkan sebagai bagian dari **latihan responsi Praktikum Pemro
 
 1. Clone repo ini:
    ```
-   git clone https://github.com/username/restaurant-flutter-app.git
-   cd restaurant-flutter-app
+   git clone https://github.com/najlanadhifa/latres-praktpm.git
 2. Install dependency:
    ```
    flutter pub get
