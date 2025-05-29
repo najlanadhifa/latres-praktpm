@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# latresponsi_205
-
-A new Flutter project.
-=======
 # 🍽️ Restaurant App Flutter
 
 Aplikasi ini dikembangkan sebagai bagian dari **latihan responsi praktikum mata kuliah Pemrograman Mobile**. Proyek ini bertujuan untuk mengasah kemampuan pengembangan aplikasi Flutter dengan memanfaatkan REST API, manajemen state sederhana, serta penyimpanan data lokal menggunakan SharedPreferences dan Hive.
