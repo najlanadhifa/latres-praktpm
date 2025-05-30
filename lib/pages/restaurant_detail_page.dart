@@ -103,7 +103,8 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
       body: isLoading
           ? const Center(child: CircularProgressIndicator()) // loading
           : errorMessage != null
-              ? Center( // error muncul
+              ? Center(
+                  // error muncul
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -119,8 +120,8 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
                   ),
                 )
               : restaurant == null
-                  ? const Center(child: Text('Restaurant tidak ditemukan')) 
-                  : CustomScrollView( 
+                  ? const Center(child: Text('Restaurant tidak ditemukan'))
+                  : CustomScrollView(
                       slivers: [
                         SliverAppBar(
                           expandedHeight: 300,
@@ -184,33 +185,33 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
                                 ),
                                 const SizedBox(height: 24),
                                 // kategori
-                                _buildSectionTitle('Kategori'),
-                                Wrap(
-                                  spacing: 8,
-                                  children: restaurant!.categories
-                                      .map((c) => Chip(label: Text(c.name)))
-                                      .toList(),
-                                ),
-                                const SizedBox(height: 24),
-                                // menu makanan & minuman
-                                _buildSectionTitle('Menu'),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                        child: _buildMenuList('Makanan',
-                                            restaurant!.menus.foods)),
-                                    const SizedBox(width: 16),
-                                    Expanded(
-                                        child: _buildMenuList('Minuman',
-                                            restaurant!.menus.drinks)),
-                                  ],
-                                ),
-                                const SizedBox(height: 24),
-                                // review dari pelanggan
-                                _buildSectionTitle('Review'),
-                                ...restaurant!.customerReviews
-                                    .map((r) => _buildReviewCard(r)),
+                                // _buildSectionTitle('Kategori'),
+                                // Wrap(
+                                //   spacing: 8,
+                                //   children: restaurant!.categories
+                                //       .map((c) => Chip(label: Text(c.name)))
+                                //       .toList(),
+                                // ),
+                                // const SizedBox(height: 24),
+                                // // menu makanan & minuman
+                                // _buildSectionTitle('Menu'),
+                                // Row(
+                                //   crossAxisAlignment: CrossAxisAlignment.start,
+                                //   children: [
+                                //     Expanded(
+                                //         child: _buildMenuList('Makanan',
+                                //             restaurant!.menus.foods)),
+                                //     const SizedBox(width: 16),
+                                //     Expanded(
+                                //         child: _buildMenuList('Minuman',
+                                //             restaurant!.menus.drinks)),
+                                //   ],
+                                // ),
+                                // const SizedBox(height: 24),
+                                // // review dari pelanggan
+                                // _buildSectionTitle('Review'),
+                                // ...restaurant!.customerReviews
+                                //     .map((r) => _buildReviewCard(r)),
                               ],
                             ),
                           ),
@@ -249,63 +250,63 @@ class _RestaurantDetailPageState extends State<RestaurantDetailPage> {
   }
 
   // daftar menu
-  Widget _buildMenuList(String title, List<Category> items) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(title,
-            style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                color: Colors.black54)),
-        const SizedBox(height: 8),
-        ...items.map((item) => Padding(
-              padding: const EdgeInsets.symmetric(vertical: 2),
-              child: Row(
-                children: [
-                  const Icon(Icons.fastfood, color: Colors.green, size: 18),
-                  const SizedBox(width: 8),
-                  Expanded(child: Text(item.name)),
-                ],
-              ),
-            )),
-      ],
-    );
-  }
+  // Widget _buildMenuList(String title, List<Category> items) {
+  //   return Column(
+  //     crossAxisAlignment: CrossAxisAlignment.start,
+  //     children: [
+  //       Text(title,
+  //           style: const TextStyle(
+  //               fontSize: 16,
+  //               fontWeight: FontWeight.w600,
+  //               color: Colors.black54)),
+  //       const SizedBox(height: 8),
+  //       ...items.map((item) => Padding(
+  //             padding: const EdgeInsets.symmetric(vertical: 2),
+  //             child: Row(
+  //               children: [
+  //                 const Icon(Icons.fastfood, color: Colors.green, size: 18),
+  //                 const SizedBox(width: 8),
+  //                 Expanded(child: Text(item.name)),
+  //               ],
+  //             ),
+  //           )),
+  //     ],
+  //   );
+  // }
 
   // card buat review
-  Widget _buildReviewCard(CustomerReview review) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: Colors.grey[100],
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.grey[300]!),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            review.name,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 14,
-              color: Color(0xFF502314),
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            review.review,
-            style: const TextStyle(fontSize: 14, color: Colors.black87),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            review.date,
-            style: const TextStyle(fontSize: 12, color: Colors.grey),
-          ),
-        ],
-      ),
-    );
-  }
+  // Widget _buildReviewCard(CustomerReview review) {
+  //   return Container(
+  //     margin: const EdgeInsets.symmetric(vertical: 8),
+  //     padding: const EdgeInsets.all(12),
+  //     decoration: BoxDecoration(
+  //       color: Colors.grey[100],
+  //       borderRadius: BorderRadius.circular(12),
+  //       border: Border.all(color: Colors.grey[300]!),
+  //     ),
+  //     child: Column(
+  //       crossAxisAlignment: CrossAxisAlignment.start,
+  //       children: [
+  //         Text(
+  //           review.name,
+  //           style: const TextStyle(
+  //             fontWeight: FontWeight.bold,
+  //             fontSize: 14,
+  //             color: Color(0xFF502314),
+  //           ),
+  //         ),
+  //         const SizedBox(height: 4),
+  //         Text(
+  //           review.review,
+  //           style: const TextStyle(fontSize: 14, color: Colors.black87),
+  //         ),
+  //         const SizedBox(height: 4),
+  //         Text(
+  //           review.date,
+  //           style: const TextStyle(fontSize: 12, color: Colors.grey),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 }

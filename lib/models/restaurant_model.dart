@@ -82,10 +82,10 @@ class RestaurantDetail {
   final String city;
   final String address;
   final String pictureId;
-  final List<Category> categories;
-  final Menus menus;
+  // final List<Category> categories;
+  // final Menus menus;
   final double rating;
-  final List<CustomerReview> customerReviews;
+  // final List<CustomerReview> customerReviews;
 
   RestaurantDetail({
     required this.id,
@@ -94,10 +94,10 @@ class RestaurantDetail {
     required this.city,
     required this.address,
     required this.pictureId,
-    required this.categories,
-    required this.menus,
+    // required this.categories,
+    // required this.menus,
     required this.rating,
-    required this.customerReviews,
+    // required this.customerReviews,
   });
 
   // convert dari json ke object
@@ -109,12 +109,12 @@ class RestaurantDetail {
       city: json["city"],
       address: json["address"],
       pictureId: json["pictureId"],
-      categories: List<Category>.from(
-          json["categories"].map((x) => Category.fromJson(x))),
-      menus: Menus.fromJson(json["menus"]),
+      // categories: List<Category>.from(
+      //     json["categories"].map((x) => Category.fromJson(x))),
+      // menus: Menus.fromJson(json["menus"]),
       rating: (json["rating"] as num).toDouble(),
-      customerReviews: List<CustomerReview>.from(
-          json["customerReviews"].map((x) => CustomerReview.fromJson(x))),
+      // customerReviews: List<CustomerReview>.from(
+      //     json["customerReviews"].map((x) => CustomerReview.fromJson(x))),
     );
   }
 }
@@ -142,48 +142,48 @@ class RestaurantDetailResponse {
 }
 
 // kategori makanan/minuman
-class Category {
-  final String name;
+// class Category {
+//   final String name;
 
-  Category({required this.name});
+//   Category({required this.name});
 
-  // convert dari json ke object
-  factory Category.fromJson(Map<String, dynamic> json) =>
-      Category(name: json["name"]);
-}
+//   // convert dari json ke object
+//   factory Category.fromJson(Map<String, dynamic> json) =>
+//       Category(name: json["name"]);
+// }
 
-// data menu (foods & drinks)
-class Menus {
-  final List<Category> foods;
-  final List<Category> drinks;
+// // data menu (foods & drinks)
+// class Menus {
+//   final List<Category> foods;
+//   final List<Category> drinks;
 
-  Menus({required this.foods, required this.drinks});
+//   Menus({required this.foods, required this.drinks});
 
-  // convert dari json ke object
-  factory Menus.fromJson(Map<String, dynamic> json) => Menus(
-        foods:
-            List<Category>.from(json["foods"].map((x) => Category.fromJson(x))),
-        drinks: List<Category>.from(
-            json["drinks"].map((x) => Category.fromJson(x))),
-      );
-}
+//   // convert dari json ke object
+//   factory Menus.fromJson(Map<String, dynamic> json) => Menus(
+//         foods:
+//             List<Category>.from(json["foods"].map((x) => Category.fromJson(x))),
+//         drinks: List<Category>.from(
+//             json["drinks"].map((x) => Category.fromJson(x))),
+//       );
+// }
 
-// data review customer
-class CustomerReview {
-  final String name;
-  final String review;
-  final String date;
+// // data review customer
+// class CustomerReview {
+//   final String name;
+//   final String review;
+//   final String date;
 
-  CustomerReview({
-    required this.name,
-    required this.review,
-    required this.date,
-  });
+//   CustomerReview({
+//     required this.name,
+//     required this.review,
+//     required this.date,
+//   });
 
-  // convert dari json ke object
-  factory CustomerReview.fromJson(Map<String, dynamic> json) => CustomerReview(
-        name: json["name"],
-        review: json["review"],
-        date: json["date"],
-      );
-}
+//   // convert dari json ke object
+//   factory CustomerReview.fromJson(Map<String, dynamic> json) => CustomerReview(
+//         name: json["name"],
+//         review: json["review"],
+//         date: json["date"],
+//       );
+// }
